@@ -1,14 +1,14 @@
 /* Reset Styles */
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, serif;
-    color: #505050;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d62727;
 }
 
 /* Header Styles */
 header {
-    background-color: #4e82d6;
+    background-color: #5f89cb;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -32,8 +32,8 @@ header {
 
 /* Navigation Styles */
 nav ul {
-    background-color: #333;
-    color: #fff;
+    background-color: #f70b0b;
+    color: #1ef40a;
     text-align: center;
     list-style-type: none;
     margin: 0;
@@ -46,7 +46,7 @@ nav li {
 
 nav a {
     display: block;
-    color: #fff;
+    color: #5aeded;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -144,7 +144,7 @@ main h3 {
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #7ffa5c;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -181,7 +181,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #b3b3b3;  /* Lighter color on hover */
+    color: #e8e38a;  /* Lighter color on hover */
 }
 
 footer p {
