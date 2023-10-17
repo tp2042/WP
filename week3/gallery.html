@@ -5,92 +5,6 @@
   <title>Gallery - MAPS</title>
   <link rel="stylesheet" href="style.css">
 
-  <div class="slideshow-image">
-  <div class="mySlides">
-  <div class="numbertext">1/8 </div>
-  <img src="images/1.png" alt="Gallery Image 1" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">2/8 </div>
-  <img src="images/2.png" alt="Gallery Image 2" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">3/8 </div>
-  <img src="images/3.png" alt="Gallery Image 3" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">4/8 </div>
-  <img src="images/4.png" alt="Gallery Image 4" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">5/8 </div>
-  <img src="images/5.png" alt="Gallery Image 5" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">6/8 </div>
-  <img src="images/6.png" alt="Gallery Image 6" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">7/8 </div>
-  <img src="images/7.png" alt="Gallery Image 7" class="slideshow-img">
-</div>
-<div class="mySlides">
-  <div class="numbertext">8/8 </div>
-  <img src="images/8.png" alt="Gallery Image 8" class="slideshow-img">
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">Previous</a>
-<a class="next" onclick="plusSlides(1)">Next</a>
-</div>
-
-<script>
-  let Index = 1;
-  showSlides(Index);
-
-  function plusSlides(n) 
-  {
-    showSlides((Index += n));
-  }
-  function currSlide(n)
-  {
-    showSlides((slideIndex = n));
-  }
-  
-function showSlides(n)
-{
-  const slides = document.getElementsByClassName("mySlides");
-
-  if(n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length
-  }
-
-  for(let a = 0; a < slides.length; i++)
-  {
-    slides[a].style.display = "none";
-  }
-  slides[slideIndex - 1],style.display = "block";
-}
-
-  </script>
-
-  <style>
-   .gallery-container {
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-top: 40px;
-  }
-
-   .gallery-container img {
-	width: 24%;
-	margin-bottom: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -122,12 +36,134 @@ function showSlides(n)
 			<img src="images/7.png" alt="Image 7">
 			<img src="images/8.png" alt="Image 8">
 		</div>
-   <!-- Call to Action -->
-   <section class="cta-container">
-    <h2>Ready to Experience Our Services?</h2>
-    <p>Join us today and discover the difference we can make for you!</p>
-    <a href="contact.html" class="cta-button">Contact Us Now</a>
-  </section>
+
+    <div class="slideshow-image">
+      <div class="mySlides">
+      <div class="numbertext">1/8 </div>
+      <img src="images/1.png" alt="Gallery Image 1" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2/8 </div>
+      <img src="images/2.png" alt="Gallery Image 2" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3/8 </div>
+      <img src="images/3.png" alt="Gallery Image 3" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4/8 </div>
+      <img src="images/4.png" alt="Gallery Image 4" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5/8 </div>
+      <img src="images/5.png" alt="Gallery Image 5" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6/8 </div>
+      <img src="images/6.png" alt="Gallery Image 6" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7/8 </div>
+      <img src="images/7.png" alt="Gallery Image 7" class="slideshow-img">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">8/8 </div>
+      <img src="images/8.png" alt="Gallery Image 8" class="slideshow-img">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">Previous</a>
+<a class="next" onclick="plusSlides(1)">Next</a>
+</div>
+  
+  <script>
+
+    let Index = 1;
+    showSlides(Index);
+  
+    function plusSlides(n) 
+    {
+      showSlides((Index += n));
+    }
+    function currSlide(n)
+    {
+      showSlides((slideIndex = n));
+    }
+    
+  function showSlides(n)
+  {
+    const slides = document.getElementsByClassName("mySlides");
+  
+    if(n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+  
+    for(let a = 0; a < slides.length; i++)
+    {
+      slides[a].style.display = "none";
+    }
+    slides[slideIndex - 1],style.display = "block";
+  }
+  
+    </script>
+
+<style>
+  * {
+box-sizing: border-box;
+}
+.slideshow-img {
+vertical-align: middle;
+width: 100%;
+}
+
+
+.container {
+position: relative;
+}
+
+.mySlides {
+display: none;
+}
+
+.cursor {
+cursor: pointer;
+}
+
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+margin-top: -50px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+</style>
 
   </main>
   <footer>
@@ -141,3 +177,9 @@ function showSlides(n)
  </div>
 </body>
 </html>
+<!-- Call to Action -->
+<section class="cta-container">
+  <h2>Ready to Experience Our Services?</h2>
+  <p>Join us today and discover the difference we can make for you!</p>
+  <a href="contact.html" class="cta-button">Contact Us Now</a>
+</section>
