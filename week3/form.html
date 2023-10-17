@@ -1,24 +1,83 @@
-<html lang="en">
-    <head>
-<meta charset=""UTF-8 />
-<meta name= "viewport" content="width-device-width, initial-scale=1.0" />
-<title>Lab3 Form</title>
-<style>
-    </style>
-        </head>
-        <body>
-        <form>
-            <label> Firstname </label> 
-            <input type="text" name="firstname" size="15"/> <br> <br>
-            <label> Email </label> 
-            <input type="email" id="email" name="email"/> <br>    
-            <br> <br> 
-            <label> Password </label> 
-            <input type="Password" id="pass" name="pass"> <br>   
-            <br> <br>  
-            <label> Confirm Password </label> 
-            <input type="Password" id="repass" name="repass"> <br> <br>  
-            <input type="button" value="Submit"/>  
-            </form>  
-            </body>
-        
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="form">
+    <label> Name </label>
+    <input type="text" id="name" name="name" size="15" onblur="validateName()"/> <br>
+    <div class="error" id="nameError"></div> <br>
+
+    <label> Email </label>
+    <input type="email" id="email" name="email" onblur="validateEmail()"/> <br>
+    <div class="error" id="emailError"></div> <br>
+
+    <label> Password </label>
+    <input type="password" id="pass" name="pass" onblur="validatePassword()"/> <br>
+    <div class="error" id="passError"></div> <br>
+
+    <label> Confirm Password </label>
+    <input type="password" id="repass" name="repass" onblur="validateConfirmPassword()"/> <br>
+    <div class="error" id="repassError"></div> <br>
+
+    <input type="button" value="Submit" onclick="validateForm()"/>
+  </form>
+
+  <script>
+    function validateName() {
+      let name = document.getElementById('name');
+      let nameError = document.getElementById('nameError');
+      if (name.value.trim() === '') {
+  
+        nameError.textContent = 'Name must not be empty';
+      } else {
+        nameError.textContent = '';
+      }
+    }
+
+    function validateEmail() {
+      let email = document.getElementById('email');
+      let emailError = document.getElementById('emailError');
+      const emailPattern = /\S+@\S+\.\S+/;
+      if (email.value.trim() === '' || !email.value.match(emailPattern)) {
+        emailError.textContent = 'Invalid email address';
+      } else {
+        emailError.textContent = '';
+      }
+    }
+
+    function validatePassword() {
+      let password = document.getElementById('pass');
+      let passError = document.getElementById('passError');
+      if (password.value.trim() === '' || password.value.length < 8) {
+        passError.textContent = 'Password must be at least 8 characters long';
+      } else {
+        passError.textContent = '';
+      }
+    }
+
+    function validateConfirmPassword() {
+      let repass = document.getElementById('repass');
+      let repassError = document.getElementById('repassError');
+      let pass = document.getElementById('pass');
+      if (repass.value.trim() === '') {
+        repassError.textContent = 'Please confirm your password';
+      } else if (repass.value !== pass.value) {
+        repassError.textContent = 'Passwords do not match';
+      } else {
+
+        repassError.textContent = '';
+      }
+    }
+
+    function validateForm() {
+      validateName();
+      validateEmail();
+      validatePassword();
+      validateConfirmPassword();
+    }
+  </script>
+
+</body>
+</html>
