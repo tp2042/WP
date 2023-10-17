@@ -35,8 +35,8 @@
     </section>
 
     <script>
-let index = 0;
-const images = [
+let i = 0;
+const pictures = [
   "images/1.png",
   "images/2.png",
   "images/3.png",
@@ -47,15 +47,15 @@ const images = [
   "images/8.png",
    ];
 
-   function changeImage() {
+   function changePic() {
     const imageElement = document.querySelector('[name="slide"]')
-    imageElement.src = images[index];
-    index = (index + 1) % images.length;
+    imageElement.src = pictures[i];
+    i = (i + 1) % pictures.length;
    }
 
-   setInterval(changeImage, 2000);
+   setInterval(changePic, 2000);
 
-   window.addEventListener('load', changeImage);
+   window.addEventListener('load', changePic);
       </script>
 
    
