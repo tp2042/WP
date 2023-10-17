@@ -85,7 +85,7 @@
     }
     function currSlide(n)
     {
-      showSlides((slideIndex = n));
+      showSlides((Index = n));
     }
     
   function showSlides(n)
@@ -93,19 +93,18 @@
     const slides = document.getElementsByClassName("mySlides");
   
     if(n > slides.length) {
-      slideIndex = 1;
+      Index = 1;
     }
     if (n < 1) {
-      slideIndex = slides.length
+      Index = slides.length
     }
   
     for(let a = 0; a < slides.length; i++)
     {
       slides[a].style.display = "none";
     }
-    slides[slideIndex - 1],style.display = "block";
+    slides[Index - 1].style.display = "block";
   }
-  
     </script>
 
 <style>
