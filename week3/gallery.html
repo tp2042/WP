@@ -43,6 +43,39 @@
 <a class="next" onclick="plusSlides(1)">Next</a>
 </div>
 
+<script>
+  let Index = 1;
+  showSlides(Index);
+
+  function plusSlides(n) 
+  {
+    showSlides((Index += n));
+  }
+  function currSlide(n)
+  {
+    showSlides((slideIndex = n));
+  }
+  
+function showSlides(n)
+{
+  const slides = document.getElementsByClassName("mySlides");
+
+  if(n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
+
+  for(let a = 0; a < slides.length; i++)
+  {
+    slides[a].style.display = "none";
+  }
+  slides[slideIndex - 1],style.display = "block";
+}
+
+  </script>
+
   <style>
    .gallery-container {
 	margin: 0 auto;
@@ -79,6 +112,16 @@
   <main class="services">
       <h1>Gallery</h1>
 
+		<div class="gallery-container">
+			<img src="images/1.png" alt="Image 1">
+			<img src="images/2.png" alt="Image 2">
+			<img src="images/3.png" alt="Image 3">
+			<img src="images/4.png" alt="Image 4">
+			<img src="images/5.png" alt="Image 5">
+			<img src="images/6.png" alt="Image 6">
+			<img src="images/7.png" alt="Image 7">
+			<img src="images/8.png" alt="Image 8">
+		</div>
    <!-- Call to Action -->
    <section class="cta-container">
     <h2>Ready to Experience Our Services?</h2>
