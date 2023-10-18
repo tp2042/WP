@@ -2,6 +2,11 @@
 <html>
 <head>
   <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <form id="form">
@@ -29,9 +34,10 @@
       let name = document.getElementById('name');
       let nameError = document.getElementById('nameError');
       if (name.value.trim() === '') {
-  
+        name.style.borderColor = 'red';
         nameError.textContent = 'Name must not be empty';
       } else {
+        name.style.borderColor = 'green';
         nameError.textContent = '';
       }
     }
@@ -41,8 +47,10 @@
       let emailError = document.getElementById('emailError');
       const emailPattern = /\S+@\S+\.\S+/;
       if (email.value.trim() === '' || !email.value.match(emailPattern)) {
+        email.style.borderColor = 'red';
         emailError.textContent = 'Invalid email address';
       } else {
+        email.style.borderColor = 'green';
         emailError.textContent = '';
       }
     }
@@ -51,8 +59,10 @@
       let password = document.getElementById('pass');
       let passError = document.getElementById('passError');
       if (password.value.trim() === '' || password.value.length < 8) {
+        password.style.borderColor = 'red';
         passError.textContent = 'Password must be at least 8 characters long';
       } else {
+        password.style.borderColor = 'green';
         passError.textContent = '';
       }
     }
@@ -62,11 +72,13 @@
       let repassError = document.getElementById('repassError');
       let pass = document.getElementById('pass');
       if (repass.value.trim() === '') {
+        repass.style.borderColor = 'red';
         repassError.textContent = 'Please confirm your password';
       } else if (repass.value !== pass.value) {
+        repass.style.borderColor = 'red';
         repassError.textContent = 'Passwords do not match';
       } else {
-
+        repass.style.borderColor = 'green';
         repassError.textContent = '';
       }
     }
