@@ -1,9 +1,3 @@
-const input = document.getElementById('cityInput');
-const button = document.getElementById('bttn');
-const info = document.getElementById('weather-info');
-
-
-
 var apiKey = 'db681c89d90bd491eb9de6e9a501c4a0'; // Replace with your actual API key
 var weatherContainer = document.getElementById("weather-info");
 var btn2 = document.getElementById("btn2");
