@@ -1,8 +1,8 @@
-var apiKey = 'c304f37c863fc16d0681fe7d2f785a50'; // Replace with your actual API key
+var apiKey = 'db681c89d90bd491eb9de6e9a501c4a0'; // Replace with your actual API key
 var weatherContainer = document.getElementById("weather-info");
-var btn = document.getElementById("btn");
+var btn2 = document.getElementById("btn2");
 
-btn.addEventListener("click", function() {
+btn2.addEventListener("click", function() {
   var city = document.getElementById('cityInput').value;
   if (!city) {
     alert("Please enter a city name!");
