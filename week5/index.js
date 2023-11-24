@@ -5,7 +5,7 @@ dotenv.config({ path: './.env' });
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const app = express();
-const PORT = process.env.PORT || 8889;
+const PORT = process.env.PORT || 8888;
 
 const db = sql.createConnection({
   host: process.env.DATABASE_HOST,
